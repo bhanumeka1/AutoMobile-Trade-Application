@@ -1,0 +1,26 @@
+<%- include('./partials/header.ejs') %>
+    <form class="form" action="/trades/<%= trade.id %>?_method=PUT" method="POST">
+        <table class="tablecenter">
+        <tr>
+            <td><label>Category</label></td>
+            <td><input class="input" type="text" name="category" value="<%= trade.category %>" required></td>
+        </tr><tr>
+            <td><label>Name</label></td>
+            <td><input class="input" type="text" name="name" value="<%= trade.name %>" required></td>
+        </tr><tr>
+            <td><label>Year of MFG</label></td>
+            <td><input class="input" type="number" name="yearofMFG" value="<%= trade.yearofMFG %>" required min="1901"></td>
+        </tr><tr>
+            <td><label>Status</label></td>
+            <td><input class="input" type="text" name="status" value="<%= trade.status %>" required></td>
+        </tr><tr>
+            <td><label>Image URL</label></td>
+            <td><input class="input" type="text" name="image" value="<%= trade.image %>" required></td>
+        </tr><tr>
+            <td><label>Details</label></td>
+            <td><textarea class="input" class="form-control" name="details" id="details" rows=7 cols=50 required minlength="10"><%=trade.details %></textarea></td>
+        </tr>
+            <td colspan="2" style="text-align: center"><button class="buttons">Submit</button></td>
+        </table>
+    </form>
+    <%- include('./partials/footer.ejs') %>

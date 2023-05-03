@@ -1,0 +1,22 @@
+<%- include('./partials/header.ejs')%>
+<link rel="stylesheet" href="/css/style.css">
+<main class = "content">
+  <h1>Manage</h1>
+  <table class="profile">
+    <tr>
+      <th>Tradeable item</th>
+      <th>Own item</th>
+    </tr>
+    <tr>
+      <td> <a href="/trades/<%= item.id%>"> <%= item.name%></a> </td>
+      <td> <%= item.offerName%></a></td>
+      <td>
+        <form>
+          <button class="button" type="submit" formaction="/trades/<%=item.id%>/accept" formmethod="GET">Accept</button>
+          <button class="button" type="submit" formaction="/trades/<%=item.id%>/reject" formmethod="GET">Reject</button>
+        </form>
+      </td>
+    </tr>
+  </table>
+</main>
+<%- include('./partials/footer.ejs')%>

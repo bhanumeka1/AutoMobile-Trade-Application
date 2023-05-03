@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+  </head>
+  <body>
+    <div class="header">
+        <a href="/">
+            <img src="/images/trade.png" alt="Logo">
+        </a>
+        <ul class="header-right">
+          <li><a href="/trades/newTrade">Start Trade</a></li>
+          <% if(!user) {%>
+            <li><a href="/user/login">Login</a></li>
+            <li><a href="/user/new">Signup</a></li>
+          <% } else {%>
+            <li><a href="/user/profile">Profile</a></li>
+            <li><a href="/user/logout">Logout</a></li>
+          <%}%>
+        </ul>
+        <hr>
+        <ul>
+          <li><a href="/trades">Trades</a></li>
+        </ul>
+      </div>
+      <%if(errorMessages.length > 0){
+        errorMessages.forEach(message=>{%>
+            <div class="error"><%=message%></div>
+        <%});
+    }%>
+
+    <%if(successMessages.length > 0){
+        successMessages.forEach(message=>{%>
+            <div class = "success"><%=message%></div>
+        <%});
+    }%>

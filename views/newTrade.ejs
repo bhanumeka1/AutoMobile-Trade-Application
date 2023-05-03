@@ -1,0 +1,40 @@
+<%- include('./partials/header.ejs') %>
+    <main class="content">
+        <form class="form" action="/trades" method="post">
+          <table class="tablecenter">
+            <tr>
+              <td><label for="category">Category:</label></td>
+              <td><input class="input" type="text" id="category" name="category" placeholder="Enter Category" required></td>
+            </tr>
+            
+            <tr>
+              <td><label for="name">Name:</label></td>
+              <td><input class="input" type="text" id="name" name="name" placeholder="Enter Name" required></td>
+            </tr>
+
+            <tr>
+              <td><label for="status">Status:</label></td>
+              <td><input class="input" type="text" id="status" name="status" placeholder="Available" required></td>
+            </tr>
+            
+            <tr>
+              <td><label for="yearofMFG">Year of MFG:</label></td>
+              <td><input class="input" type="number" id="yearofMFG" min=1901 name="yearofMFG" placeholder="Enter Year(>1900)" required></td>
+            </tr>
+
+            <tr>
+              <td><label for="image">Image URL:</label></td>
+              <td><input class="input" type="text" id="image" name="image" placeholder="Enter Image URL" required></td>
+            </tr>
+
+            <tr>
+              <td><label for="details">Details:</label></td>
+              <td><textarea class="input" id="details" name="details" rows="7" placeholder="Enter Description of the item" required minlength="10"></textarea></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="submit" value="Create Trade"></td>
+            </tr>
+          </table>
+        </form>          
+    </main>
+    <%- include('./partials/footer.ejs') %>

@@ -1,0 +1,139 @@
+[{
+  "_id": {
+    "$oid": "6459c5c7ddad206ab8180f16"
+  },
+  "category": "Two Wheelers",
+  "name": "Royal Enfield",
+  "details": "Royal Enfield is an Indian motorcycle manufacturer that was founded in the early 1900s. It is known for its classic and retro-styled motorcycles that have a cult following among enthusiasts and riders. The company's signature model, the Royal Enfield Bullet, has been in continuous production since 1932, making it one of the longest-running motorcycle models in history........",
+  "image": "/images/RE.png",
+  "status": "Available",
+  "yearofMFG": 2019,
+  "author": {
+    "$oid": "6445968058cc71ec0a062570"
+  },
+  "offered": false,
+  "offerName": "",
+  "watchlist": false,
+  "createdAt": {
+    "$date": "2023-05-09T04:02:15.814Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-11T23:05:12.312Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459c5e9ddad206ab8180f19"
+  },
+  "category": "Two Wheelers",
+  "name": "Harley Davidson",
+  "details": "Harley-Davidson is an iconic American motorcycle company that has been around for over a century. The brand is known for its distinctive, heavy-weight motorcycles that are often associated with a sense of freedom and adventure. Riding a Harley-Davidson is not just about transportation, it is a lifestyle and a symbol of American culture.",
+  "image": "/images/harley.png",
+  "status": "Available",
+  "yearofMFG": 2021,
+  "author": {
+    "$oid": "6445968058cc71ec0a062570"
+  },
+  "offered": false,
+  "offerName": "",
+  "watchlist": false,
+  "createdAt": {
+    "$date": "2023-05-09T04:02:49.846Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-11T23:09:53.132Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459c618ddad206ab8180f1c"
+  },
+  "category": "Four Wheelers",
+  "name": "Dodge",
+  "details": "Dodge cars are known for their performance and power, with models that range from muscle cars to family sedans. One of the most famous Dodge models is the Challenger, a classic muscle car that has been in production since the 1960s. Other popular Dodge cars include the Charger, a full-size sedan, and the Dart, a compact car.",
+  "image": "/images/dodge.png",
+  "status": "Available",
+  "yearofMFG": 2011,
+  "author": {
+    "$oid": "6445968058cc71ec0a062570"
+  },
+  "offered": false,
+  "offerName": "",
+  "watchlist": false,
+  "createdAt": {
+    "$date": "2023-05-09T04:03:36.875Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-11T23:12:03.163Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459c644ddad206ab8180f2c"
+  },
+  "category": "Two Wheelers",
+  "name": "Jawa",
+  "details": "Jawa motorcycles are known for their distinctive designs and powerful engines. They were popular in Europe during the mid-20th century and were also exported to other parts of the world, including India. Jawa motorcycles have a strong following of enthusiasts who are passionate about the brand and its history.",
+  "image": "/images/jawa.png",
+  "status": "Available",
+  "yearofMFG": 2021,
+  "author": {
+    "$oid": "64443804a5a69e256d80da69"
+  },
+  "offered": false,
+  "offerName": "",
+  "watchlist": false,
+  "createdAt": {
+    "$date": "2023-05-09T04:04:20.272Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-11T23:05:09.500Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6459c66dddad206ab8180f2f"
+  },
+  "category": "Four Wheelers",
+  "name": "Maserati",
+  "details": "Maserati cars are known for their distinctive styling and impressive performance, with models that range from sports cars to luxury sedans. One of the most famous Maserati models is the GranTurismo, a sleek sports car that combines Italian design with advanced engineering.",
+  "image": "/images/Maserati.png",
+  "status": "Available",
+  "yearofMFG": 2014,
+  "author": {
+    "$oid": "64443804a5a69e256d80da69"
+  },
+  "offered": false,
+  "offerName": "",
+  "watchlist": false,
+  "createdAt": {
+    "$date": "2023-05-09T04:05:01.572Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-11T15:52:31.091Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a984611fd148c001731a2"
+  },
+  "category": "Four Wheelers",
+  "name": "Chevrolet",
+  "details": "Chevyy Car",
+  "image": "/images/chevycorvette.png",
+  "status": "Available",
+  "yearofMFG": 2021,
+  "author": {
+    "$oid": "64443804a5a69e256d80da69"
+  },
+  "offered": false,
+  "offerName": "",
+  "watchlist": false,
+  "createdAt": {
+    "$date": "2023-05-09T19:00:22.573Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-11T23:12:03.158Z"
+  },
+  "__v": 0
+}]

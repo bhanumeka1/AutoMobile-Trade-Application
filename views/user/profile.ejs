@@ -1,0 +1,95 @@
+
+<%- include('../partials/header.ejs')%>
+<link rel="stylesheet" href="/css/style.css">
+<main class = "content">
+        <h2>Welcome, <b><%= user.firstName %> <%= user.lastName %></b></h2>
+        <table class="profile">
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Status</th> 
+        </tr>
+        <%if(trades.length){%>
+            <p>You have created the following trades</p>
+            <%trades.forEach(trade=>{%>
+            <tr>
+                <td><a  href="/trades/<%= trade.id%>"><%= trade.name%></a></td>
+                <td><p><%= trade.category%></p></td>
+                <td><p><%= trade.status%></p></td>
+                <td class="form-actions">
+                    <form class="button-form">
+                        <button class="buttonsprof" type ="submit" formmethod = "GET" formaction = "/trades/<%= trade.id%>/edit">Update</button>
+                        <button class="buttonsprof" type ="submit" formmethod = "POST" formaction = "/trades/<%= trade.id%>?_method=DELETE">Delete</button>
+                        <%if(trade.status=="Offer pending"){%>
+                            <button class="buttonsprof" type="submit" formmethod="GET" formaction="/trades/<%= trade.id%>/manage">ManageOffer</button>
+                        <%}%>
+                    </form>
+                </td>
+            </tr>
+            <%});
+        } else {%>
+            <p>You have not created any trades</p>
+        <%}%>
+    </table> 
+    <p><b>Watchlist</b></p>
+    <% if (saved.length && saves.length) { %>
+        <table class="profile">
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+            <% let names = saves.map(save => save.Name); %>
+            <% saved.forEach(item => { %>
+                <% if (names.includes(item.name)) { %>
+                    <tr>
+                        <td><a href="/trades/<%= item.id %>"><p><%= item.name %></p></a></td>
+                        <td><p><%= item.category %></p></td>
+                        <td><p><%= item.status %></p></td>
+                        <td>
+                            <form action="/trades/<%= item.id %>/savedelete?_method=delete" method="post">
+                                <button class="button" type="submit">Unwatch</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% } %>
+            <% }); %>
+        </table>
+    <% } else { %>
+        <p>No items in your watchlist</p>
+    <% } %>
+    
+    <p><b>Offers</b></p>
+    <% if (offered.length && offers.length) { %>
+        <table class="profile">
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+            <% let names = offers.map(offer => offer.Name); %>
+            <% offered.forEach(item => { %>
+                <% if (names.includes(item.name)) { %>
+                    <tr>
+                        <td><a href="/trades/<%= item.id %>"><p><%= item.name %></p></a></td>
+                        <td><p><%= item.category %></p></td>
+                        <td><p><%= item.status %></p></td>
+                        <td>
+                            <form action="/trades/<%= item.id %>/offerdelete?_method=delete" method="post">
+                                <button class="button" type="submit">Cancel Offer</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% } %>
+            <% }); %>
+        </table>
+    <% } else { %>
+        <p>No Offers</p>
+    <% } %>
+    
+
+</main>
+</body>
+<%- include('../partials/footer.ejs')%>

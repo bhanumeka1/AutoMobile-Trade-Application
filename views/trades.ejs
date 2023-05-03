@@ -1,0 +1,16 @@
+<%- include('./partials/header.ejs') %>
+    <main class="content">
+      <%if(categories.length) {%>
+        <%categories.forEach(category=>{%>
+          <strong><%=category%><br></strong>
+          <%trades.forEach(trade=>{%>
+            <%if(trade.category==category){%>
+              <p><a class="cat" href = "/trades/<%=trade.id%>"> <%= trade.name%></a><br></p>
+            <%}%>
+          <%})%><br>
+        <%});
+    }else{%>
+        <p>There are no Trades to display</p>
+    <%}%>
+    </main>
+    <%- include('./partials/footer.ejs') %>

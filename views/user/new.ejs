@@ -1,0 +1,30 @@
+<%- include('../partials/header.ejs')%>
+<link rel="stylesheet" href="/css/style.css">
+<div class="content">
+    <form action="/user" method="POST">
+        <div class="card-view">
+            <table class="table">
+                <tr>
+                    <td><label for="firstName" class="label">First Name</label></td>
+                    <td><input type="text" id="firstName" name="firstName" class="input" required></td>
+                </tr>
+                <tr>
+                    <td><label for="lastName" class="label">Last Name</label></td>
+                    <td><input type="text" id="lastName" name="lastName" class="input" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email" class="label">Email Address</label></td>
+                    <td><input type="email" id="email" name="email" class="input" required></td>
+                </tr>
+                <tr>
+                    <td><label for="password" class="label">Password</label></td>
+                    <td><input type="password" id="password" name="password" class="input" minlength="8" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="button-container"><button class="button">Sign Up</button></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</div>
+<%- include('../partials/footer.ejs')%>

@@ -1,0 +1,55 @@
+use trading
+db.createCollection("trades")
+db.trades.insertOne({
+  category: 'Two Wheelers',
+  name: 'Royal Enfield',
+  details: "Royal Enfield is an Indian motorcycle manufacturer that was founded in the early 1900s. It is known for its classic and retro-styled motorcycles that have a cult following among enthusiasts and riders. The company's signature model, the Royal Enfield Bullet, has been in continuous production since 1932, making it one of the longest-running motorcycle models in history.",
+  image: "/images/RE.png",
+  status: "Available",
+  yearofMFG: "2018"
+});
+
+db.trades.insertOne({
+	category: 'Two Wheelers',
+    name:'Harley Davidson',
+    details: "Harley-Davidson is an iconic American motorcycle company that has been around for over a century. The brand is known for its distinctive, heavy-weight motorcycles that are often associated with a sense of freedom and adventure. Riding a Harley-Davidson is not just about transportation, it is a lifestyle and a symbol of American culture.",
+    image: "/images/harley.png",
+    status: "Available",
+    yearofMFG: "2020"
+});
+
+db.trades.insertOne({
+	category: 'Two Wheelers',
+    name:'Jawa',
+    details: "Jawa motorcycles are known for their distinctive designs and powerful engines. They were popular in Europe during the mid-20th century and were also exported to other parts of the world, including India. Jawa motorcycles have a strong following of enthusiasts who are passionate about the brand and its history.",
+    image: "/images/jawa.png",
+    status: "Available",
+    yearofMFG: "2005"
+});
+
+db.trades.insertOne({
+	category: 'Four Wheelers',
+    name:'Dodge',
+    details: "Dodge cars are known for their performance and power, with models that range from muscle cars to family sedans. One of the most famous Dodge models is the Challenger, a classic muscle car that has been in production since the 1960s. Other popular Dodge cars include the Charger, a full-size sedan, and the Dart, a compact car.",
+    image: "/images/dodge.png",
+    status: "Available",
+    yearofMFG: "2011"
+});
+
+db.trades.insertOne({
+	category: 'Four Wheelers',
+    name:'Maserati',
+    details: "Maserati cars are known for their distinctive styling and impressive performance, with models that range from sports cars to luxury sedans. One of the most famous Maserati models is the GranTurismo, a sleek sports car that combines Italian design with advanced engineering.",
+    image: "/images/Maserati.png",
+    status: "Available",
+    yearofMFG: "2014"
+});
+
+db.trades.insertOne({
+	category: 'Four Wheelers',
+    name:'Chevrolet',
+    details: "Chevrolet cars are known for their reliability, affordability, and practicality. The brand has a reputation for producing vehicles that are suitable for everyday use and can withstand heavy use over time. Some of the most popular Chevrolet cars include the Malibu, a midsize sedan, and the Camaro, a classic muscle car.",
+    image: "/images/chevycorvette.png",
+    status: "Available",
+    yearofMFG: "2019"
+});

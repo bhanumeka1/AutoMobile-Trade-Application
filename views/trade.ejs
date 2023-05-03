@@ -1,0 +1,39 @@
+<%- include('./partials/header.ejs') %>
+    <main class="content">
+        <div class="flex-container">
+        <div class="Imagecontainer">
+        <div class="ImgName">
+            <img class="re" src="<%= trade.image %>" alt="Image">
+            <h3><%= trade.name%></h3>
+        </div>
+        <h4>Year of MFG</h4>
+        <p><%= trade.yearofMFG %></p>
+        <h4>Status</h4>
+        <p><%= trade.status %></p>
+        <h4>Details</h4>
+        <p class="trade-details"><%= trade.details %></p>
+        <% if(user == trade.author._id) { %>
+        <form class="button-form">
+            <button class="buttons" type ="submit" formmethod = "GET" formaction = "/trades/<%= trade.id%>/edit">Edit</button>
+            <button class="buttons" type ="submit" formmethod = "POST" formaction = "/trades/<%= trade.id%>?_method=DELETE">Delete</button>
+        </form>
+    <% } %>
+    </div>
+    <% if((user != trade.author._id)&&trade.status=="Available") { %>
+    <div class="Sidecontainer">
+      <p>Are you still interested?</p>
+      <br>
+      <form  class="button-form">
+        <button class="buttons1" type ="submit" formmethod="GET" formaction="/trades/<%= trade.id%>/trade">Trade</button>
+        <%if(trade.watchlist==false){%>
+          <input type="hidden" id="Name" name="Name" value="<%= trade.name%>" required/>
+          <button class="buttons1" type ="submit" formmethod="POST" formaction="/trades/<%= trade.id%>/watchlist">Watch</button>
+        <%} else {%>
+          <button class="buttons1" type ="submit" formmethod="POST" formaction="/trades/<%= trade.id%>/savedelete?_method=delete">UnWatch</button>
+        <%}%>
+      </form>
+    </div>
+    <%}%>
+  </div>
+</main>
+    <%- include('./partials/footer.ejs') %>

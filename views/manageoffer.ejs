@@ -1,0 +1,21 @@
+<%- include('./partials/header.ejs')%>
+<link rel="stylesheet" href="/css/style.css">
+<main class = "content">
+<h2>Manage</h2>
+<table class="profile">
+    <tr>
+      <th>Your product in trade</th>
+      <th>Their product in trade</th>
+    </tr>
+    <tr>
+      <td> <a href="/trades/<%= item.id%>"> <%= item.name%></a> </td>
+      <td>  <%= item.offerName%></td> </a>
+      <td>
+          <form action='/trades/<%= item.id%>/manageofferdel?_method=delete' method="post">
+            <button class="button" type="submit">Cancel Offer</button>
+          </form>
+      </td>
+    </tr>
+  </table>
+</main>
+<%- include('./partials/footer.ejs')%>
